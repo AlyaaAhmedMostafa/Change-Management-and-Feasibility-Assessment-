@@ -59,7 +59,8 @@ GROUP BY RiskLevel;
 --Potential Benefit Types by Change Type
 SELECT ChangeType, PotentialBenefit, COUNT(*) AS Count
 FROM [Healthcare].[dbo].[management_records]
-GROUP BY ChangeType, PotentialBenefit;
+GROUP BY ChangeType, PotentialBenefit
+ORDER BY  COUNT DESC, ChangeType;
 
 --Impact Score Analysis (Avg, Max, Min)
 SELECT 
